@@ -1,11 +1,11 @@
 # PSPlay Application Hosting
 
-Welcome to the repository for PSPlay, a third-party PS Remote Play client available for Android, iOS (as MirrorPlay), and now for PC. This repository serves as the hosting platform for the PSPlay PC application.
+Welcome to the repository for PSPlay, a third-party PS Remote Play client available for Android, iOS (as MirrorPlay), and now for PCs with Windows and Linux OS. This repository serves as the hosting platform for the PSPlay application.
 
 ## Download
 You can download the current version from the [Releases page](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/).
 
-PSPlay is currently supported on Android, iOS, Apple TV and on Windows 10/11 x64 PCs, with upcoming support for Linux PCs.
+PSPlay is currently supported on Android, iOS, Apple TV, Windows 10/11 and Linux x64 PCs.
 
 ## Key Features
 - **Third-Party Controller Support**: Works with USB and Bluetooth controllers.
@@ -18,14 +18,15 @@ PSPlay is currently supported on Android, iOS, Apple TV and on Windows 10/11 x64
 - **Optimized for Peak Streaming Performance**: Ensures a fast and stable streaming experience through extensive optimization and beta testing.
 
 ## Licensing
-A valid license is required to use the full version of the PSPlay PC port. Licenses can be [purchased here](https://streamingdv.com/shop-list-ns.html).
-It's a one-time purchase that allows for personal use on multiple devices.
+A valid license is required to use the full version of the PSPlay PC port and the standalone Android APK. Licenses can be [purchased here](https://streamingdv.com/shop-list-ns.html).
+This is a one-time purchase that grants personal use across multiple devices. A single PC license key works for both Linux and Windows, while other platforms like Android require separate license keys.
 
 ## Android Version
-Download the Android version on [Google Play](https://play.google.com/store/apps/details?id=psplay.grill.com). An APK will also be available soon on this repository.
+Download the Android version on [Google Play](https://play.google.com/store/apps/details?id=psplay.grill.com). An alternative APK download is also available from the
+latest [GitHub release](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/). Please note that a valid Android APK license is required, which can be purchased [here](https://streamingdv.com/shop-list-ns)..
 
 ## iOS / Apple TV
-Download the iOS/Apple TV port from the [App Store](https://apps.apple.com/us/app/mirrorplay-remote-streaming/id1638586503).
+Download the iOS/Apple TV PSPlay port called MirrorPlay from the [App Store](https://apps.apple.com/us/app/mirrorplay-remote-streaming/id1638586503).
 
 ## Open Source Contributions
 The development of PSPlay has been supported by several excellent open-source libraries:
