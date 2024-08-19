@@ -23,7 +23,7 @@ This is a one-time purchase that grants personal use across multiple devices. A 
 
 ## Android Version
 Download the Android version on [Google Play](https://play.google.com/store/apps/details?id=psplay.grill.com). An alternative APK download is also available from the
-latest [GitHub release](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/). Please note that a valid Android APK license is required, which can be purchased [here](https://streamingdv.com/shop-list-ns)..
+latest [GitHub release](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/). Please note that a valid Android APK license is required, which can be purchased [here](https://streamingdv.com/shop-list-ns).
 
 ## iOS / Apple TV
 Download the iOS/Apple TV PSPlay port called MirrorPlay from the [App Store](https://apps.apple.com/us/app/mirrorplay-remote-streaming/id1638586503).
