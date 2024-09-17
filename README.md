@@ -1,6 +1,6 @@
 # PSPlay Application Hosting
 
-Welcome to the repository for PSPlay, a third-party PS Remote Play client available for Android, iOS (as MirrorPlay), and now for PCs with Windows and Linux OS. This repository serves as the hosting platform for the PSPlay application.
+Welcome to the repository for PSPlay, a third-party Remote Play client available for Android, iOS (as MirrorPlay), and now for PCs with Windows and Linux OS. This repository serves as the hosting platform for the PSPlay application.
 
 ## Download
 You can download the current version from the [Releases page](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/).
@@ -40,7 +40,7 @@ The development of PSPlay has been supported by several excellent open-source li
 Parts of the PSPlay PC port, such as the Vulkan rendering pipeline and the gamepad handling via SDL2 through Jamepad, are open-sourced here:
 
 - [libplacebo JNI project](https://github.com/streamingdv/libplacebo-jni)
-- [Jamepad with DualSense/ DualShock features](https://github.com/grill2010/Jamepad)
+- [Jamepad with D-Sense/ D-Shock features](https://github.com/grill2010/Jamepad)
 
 ## Contact
 For any inquiries or issues with the application, feel free to reach out to me at [streamingdv@outlook.com](mailto:streamingdv@outlook.com).
