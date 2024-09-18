@@ -46,3 +46,5 @@ Parts of the PSPlay PC port, such as the Vulkan rendering pipeline and the gamep
 For any inquiries or issues with the application, feel free to reach out to me at [streamingdv@outlook.com](mailto:streamingdv@outlook.com).
 
 Check out my other projects on GitHub or follow the development of PSPlay on [the PSPlay subreddit](https://www.reddit.com/r/PSPlay/).
+
+**Disclaimer:** This project is not endorsed or certified by Sony Interactive Entertainment LLC.
