@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="orientation_type_list_preference">
+        <item>Standard landscape</item>
+        <item>Reverse landscape</item>
+    </string-array>
+</resources>

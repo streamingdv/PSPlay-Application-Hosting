@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="resolution_list_preference">
+        <item>1080p (PS5/ PS4 PRO only)</item>
+        <item>720p</item>
+        <item>540p</item>
+        <item>360p</item>
+    </string-array>
+
+    <string-array name="fps_list_preference">
+        <item>30 FPS</item>
+        <item>60 FPS</item>
+    </string-array>
+
+    <string-array name="decoder_performance_profile_preference">
+        <item>Compatibility (safe fallback)</item>
+        <item>Standard</item>
+        <item>Low latency</item>
+        <item>Ultra-low latency</item>
+    </string-array>
+
+    <string-array name="gamepad_refresh_rate_preference">
+        <item>Low</item>
+        <item>Standard</item>
+        <item>High</item>
+        <item>Ultra</item>
+    </string-array>
+
+    <string-array name="dualsense_mapping_type_preference">
+        <item>Auto</item>
+        <item>Mapping 1</item>
+        <item>Mapping 2</item>
+    </string-array>
+
+    <string-array name="buffered_video_frame_rate_preference">
+        <item>Few</item>
+        <item>Medium</item>
+        <item>Many</item>
+    </string-array>
+
+    <string-array name="bitrate_list_preference">
+        <item>Auto</item>
+        <item>Bitrate start value</item>
+        <item>Manual</item>
+    </string-array>
+
+    <string-array name="audio_mode_list_preference">
+        <item>Speaker</item>
+        <item>Headphone</item>
+        <item>Auto</item>
+        <item>Standard</item>
+    </string-array>
+
+    <string-array name="audio_buffer_size_mode_list_preference">
+        <item>Minimum latency</item>
+        <item>Balanced</item>
+        <item>Maximum stability</item>
+    </string-array>
+
+    <string-array name="video_format_list_preference">
+        <item>Keep aspect ratio</item>
+        <item>Stretched</item>
+        <item>Zoomed</item>
+        <item>Stretched (16:10)</item>
+        <item>Stretched (18:9)</item>
+        <item>Stretched (21:9)</item>
+        <item>Stretched (4:3)</item>
+    </string-array>
+
+    <string-array name="video_frame_pacing_list_preference">
+        <item>Lowest latency</item>
+        <item>Balanced</item>
+        <item>Balanced with FPS limit</item>
+        <item>Smoothest video (may increase latency)</item>
+    </string-array>
+
+    <string-array name="compact_stream_area_mode_list_preference">
+        <item>Disabled</item>
+        <item>Compact (centered)</item>
+        <item>Compact (top)</item>
+    </string-array>
+</resources>

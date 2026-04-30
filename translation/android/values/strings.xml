@@ -1,0 +1,780 @@
+<resources>
+    <string name="app_name">PXPlay</string>
+    <string name="activity_settings">Settings</string>
+    <string name="tv_remote_connection_mode_message">Choose how to connect:</string>
+    <string name="tv_enter_console_ip">Enter Console IP Address</string>
+    <string name="tv_psn_expired_title">PSN Login Required</string>
+    <string name="tv_psn_expired_message">Your PSN credentials expired. Sign in again to continue.</string>
+    <string name="tv_sign_in_again">Sign In Again</string>
+    <string name="tv_wrong_psn_title">Wrong PSN Account</string>
+    <string name="tv_wrong_psn_message">Please sign in with the same PSN profile linked to this console.</string>
+    <string name="tv_link_console_subtitle">Register PXPlay with a new console</string>
+    <string name="tv_link_console_action">Link Console</string>
+    <string name="tv_ps5_settings">PS5 Settings</string>
+    <string name="tv_ps4_settings">PS4 Settings</string>
+    <string name="tv_console_settings">Console Settings</string>
+    <string name="tv_continue">Continue</string>
+    <string name="tv_settings_advanced_title">Advanced settings</string>
+    <string name="tv_settings_category_advanced_streaming_subtitle">Connection, decoder, and compatibility</string>
+    <string name="tv_settings_category_gamepad_title">Gamepad</string>
+    <string name="tv_settings_category_gamepad_subtitle">Rumble, sticks, and USB controller features</string>
+    <string name="tv_settings_category_audio_subtitle">Change the audio output mode of this TV</string>
+    <string name="tv_settings_category_experimental_subtitle">Optional features that may change over time</string>
+    <string name="tv_settings_reset_streaming_summary">Reset streaming and rendering settings in this section only.</string>
+    <string name="tv_settings_reset_advanced_summary">Reset advanced settings in this section only.</string>
+    <string name="tv_settings_reset_gamepad_summary">Reset gamepad settings in this section only.</string>
+    <string name="tv_settings_reset_audio_summary">Reset audio settings in this section only.</string>
+    <string name="tv_settings_reset_experimental_summary">Reset experimental settings in this section only.</string>
+    <string name="settings_section_remote_play">Remote Play</string>
+    <string name="settings_remote_subsection_gamepad_title">Gamepad</string>
+    <string name="settings_section_device">Device</string>
+    <string name="settings_appearance_title">Appearance</string>
+    <string name="settings_appearance_list_subtitle">Look and feel</string>
+    <string name="settings_appearance_show_link_console_title">Show link console card</string>
+    <string name="settings_appearance_show_link_console_summary">Display the large \"Link New Console\" card on the home screen.</string>
+    <string name="settings_appearance_show_recent_game_artwork_title">Show recent game artwork</string>
+    <string name="settings_appearance_show_recent_game_artwork_summary">Display recently played game artwork on console cards. When turned off, PXPlay shows the default card image instead.</string>
+    <string name="settings_appearance_background_stripes_title">Background stripes</string>
+    <string name="settings_appearance_background_stripes_summary">Show subtle vertical lines in the app background.</string>
+    <string name="settings_appearance_console_card_layout_title">Console card layout</string>
+    <string name="settings_appearance_console_card_layout_summary">Choose how registered consoles are displayed on the home screen.</string>
+    <string name="settings_appearance_console_card_layout_value_auto">Auto</string>
+    <string name="settings_appearance_console_card_layout_value_single_card">Single card</string>
+    <string name="settings_appearance_console_card_layout_value_legacy">Legacy mode</string>
+    <string name="settings_appearance_default_remote_play_action_title">Default Remote Play button action</string>
+    <string name="settings_appearance_default_remote_play_action_summary">Choose what happens when you press Remote Play, or keep the default behavior to choose each time.</string>
+    <string name="settings_appearance_default_remote_play_action_always_ask">Always ask</string>
+    <string name="settings_appearance_show_wake_up_button_title">Show wake-up button</string>
+    <string name="settings_appearance_show_wake_up_button_summary">Show a separate wake-up button on the registered console card</string>
+    <string name="toast_wake_up_signal_sent">Wake-up signal sent</string>
+    <string name="content_desc_wake_up_button">Wake up console</string>
+    <string name="settings_appearance_remember_last_tv_console_focus_title">Remember last-used console on TV home</string>
+    <string name="settings_appearance_remember_last_tv_console_focus_summary">On Android TV, focus the console you last connected to from TV when opening the home screen.</string>
+    <string name="settings_section_on_screen_controls">On-screen Controls</string>
+    <string name="info_sheet_section_help">Help</string>
+    <string name="info_sheet_section_discover">Discover</string>
+    <string name="info_sheet_section_legal">Legal</string>
+    <string name="info_sheet_title">Info</string>
+    <string name="info_help_faq">Help / FAQ</string>
+    <string name="info_reddit">Reddit</string>
+    <string name="info_get_more_pxplay">Get More PXPlay</string>
+    <string name="settings_menu_app_settings">App Settings</string>
+    <string name="content_desc_register_console">Register console</string>
+    <string name="content_desc_info">Info</string>
+    <string name="content_desc_settings_icon">Settings</string>
+    <string name="content_desc_pxplay_logo">PXPlay logo</string>
+    <string name="content_desc_gamepad_only_enabled">Gamepad only enabled</string>
+    <string name="banner_label_remote_short">Remote</string>
+    <string name="banner_label_remote_long">Remote Play</string>
+    <string name="banner_label_local_short">Local</string>
+    <string name="banner_label_local_long">Local Play</string>
+    <string name="device_label_ps5">PS5</string>
+    <string name="device_label_ps4">PS4</string>
+    <string name="device_label_ps5_ps4_combined">%1$s/ %2$s</string>
+    <string name="clipboard_label_log">PXPlay log</string>
+    <string name="console_fallback_name">Console</string>
+    <string name="console_default_system_name_ps5">Console 5</string>
+    <string name="console_default_system_name_ps4">Console 4</string>
+    <string name="console_metadata_account">Account %1$d</string>
+    <string name="console_metadata_combined">%1$s · %2$s</string>
+    <string name="app_version_label">Version %1$s</string>
+    <string name="app_copyright">© %1$d</string>
+    <string name="activity_mapping">Gamepad button mapping</string>
+    <string name="activity_psn_login_troubleshoot">PSN login troubleshooting</string>
+    <string name="activity_psn_login_troubleshoot_short">Troubleshooting</string>
+    <string name="registerPS4">Register PS4</string>
+    <string name="registerPS5">Register PS5</string>
+    <string name="finding">Finding console…</string>
+    <string name="sendingWakeUp">Wake %s, please wait…</string>
+    <string name="disconnectingLabel">Disconnecting</string>
+    <string name="pressAgain">Press again to quit.</string>
+    <string name="ps4Connected">PS4 connected!</string>
+    <string name="ps4Disconnected">PS4 disconnected!</string>
+    <string name="ps5Connected">PS5 connected!</string>
+    <string name="ps5Disconnected">PS5 disconnected!</string>
+    <string name="ps4ConnectionError">Could not connect to PS4!</string>
+    <string name="ps5ConnectionError">Could not connect to PS5!</string>
+    <string name="registrationWasNotSuccessfulTitle">Registration was not successful!</string>
+    <string name="registrationWasNotSuccessful">Could not register PXPlay with the %1$s! The reason for the error was %2$s\n\nPlease try again, if this error persists, restart your %1$s.</string>
+
+    <string name="connectionErrorOccurredTitle">Connection failure!</string>
+    <string name="connectionErrorOccurred">A connection to your %1$s could not be established! The reason for the error was %2$s. %3$s</string>
+    <string name="connectionErrorIoExceptionOccurred">A connection to your %1$s could not be established! %2$s</string>
+    <string name="connectionErrorIoExceptionExplanation">\n\nIf you want to play over the internet be sure you have configured your router correctly and that your port forwarding settings are still valid. You can find all information here:\n\nhttps://streamingdv.github.io/pxplay/index#line5</string>
+
+    <string name="badDecoderTitle">Bad decoder</string>
+    <string name="badDecoder">No suitable decoder available on your device for %1$s. The built in codec on your device for %2$s is probably too slow to render the stream in real time.</string>
+    <string name="couldNotStartDecoderTitle">Decoder error.</string>
+    <string name="couldNotStartDecoder">Could not start video stream decoder %1$s. Something went wrong. Please try again, the built in codec on your device for %1$s could not be initialized.</string>
+    <string name="decoderErrorTitle">Decoder error</string>
+    <string name="decoderError">An error occurred while decoding the video stream. Please restart the stream. If this error is occurring several times feel free to send a bug report. The exception was:\n\n%1$s.</string>
+    <string name="streamingErrorOccurredTitle">An error occurred while streaming!</string>
+    <string name="streamingErrorOccurred">An error occurred while streaming. Please restart the stream. If this error is occurring several times feel free to send a bug report. %1$s. The exception was:\n\n%2$s.</string>
+    <string name="gamepadAdded">Gamepad added</string>
+    <string name="gamepadRemoved">Gamepad removed</string>
+    <string name="gamepadHintTitle">Gamepad support</string>
+    <string name="gamepadHintSummary">You can use your DualSense/ DualShock gamepad with Bluetooth or via USB-OTG.\n\nPlease note: use USB-OTG if possible. If you use a DualShock 4 gamepad connected via USB you have to disable \'USB audio routing\' on your device to enable audio. Connected Bluetooth gamepads may affect stream connectivity and speed on many Android devices.</string>
+    <string name="gamepadHintSummaryNoUsbHost">You can use your DualSense/ DualShock gamepad with Bluetooth. Your Android device does not support USB-OTG.\n\nPlease note: Connected Bluetooth gamepads may affect stream connectivity and speed on many Android devices.</string>
+    <string name="notShowAgain">Do not show again</string>
+    <string name="detectionErrorOccurredTitle">Find/ Wake up error</string>
+    <string name="detectionErrorOccurred">Finding or waking up the console was not successful! The reason for the error was %1$s. %2$s\n\nPlease try again, if this error persists, restart your console.</string>
+    <string name="ok">OK</string>
+    <string name="enterValidIpAddress">Enter a valid IP-Address!</string>
+    <string name="pin_dialog_title">Enter login PIN</string>
+    <string name="pinHint">The PIN is usually a 4-digit number</string>
+    <string name="pinWrong">Entered PIN was not correct</string>
+    <string name="pin">PIN</string>
+    <string name="enterValidPin">Please enter a valid login PIN.</string>
+    <string name="settings">Settings</string>
+    <string name="close">Close</string>
+    <string name="registered_console_compact_touch_icon_cd">Tap the card for Remote Play and Local Play</string>
+    <string name="menu_onscreen_layout">Onscreen layout</string>
+    <string name="onscreen_layout_sheet_title">Onscreen layout</string>
+    <string name="onscreen_layout_tab_create">Create new layout</string>
+    <string name="onscreen_layout_tab_edit">Edit existing layout</string>
+    <string name="onscreen_layout_create_heading">Create a custom onscreen layout for:</string>
+    <string name="onscreen_layout_edit_heading">Choose an onscreen layout to edit:</string>
+    <string name="onscreen_layout_segment_remote_play">Remote Play</string>
+    <string name="onscreen_layout_segment_gamepad_only">Gamepad only</string>
+    <string name="onscreen_layout_name_hint">Layout name</string>
+    <string name="onscreen_layout_use_template_title">Use a template layout</string>
+    <string name="onscreen_layout_use_template_summary">Start with a template layout you can edit.</string>
+    <string name="onscreen_layout_template_section_label">Template</string>
+    <string name="onscreen_layout_create_button">Create layout</string>
+    <string name="onscreen_layout_edit_button">Edit layout</string>
+    <string name="onscreen_layout_delete_button">Delete layout</string>
+    <string name="onscreen_layout_delete_dialog_title">Delete %1$s</string>
+    <string name="onscreen_layout_set_as_default">Set as default</string>
+    <string name="onscreen_layout_unset_as_default">Unset as default</string>
+    <string name="onscreen_layout_default_layout_indicator">Default layout</string>
+    <string name="onscreen_layout_empty_title">No layouts yet</string>
+    <string name="onscreen_layout_empty_subtitle">Create a new layout to get started.</string>
+    <string name="remoteSettingsTitle">Streaming</string>
+    <string name="resetSettings">Reset settings?</string>
+    <string name="resetSettingsHint">Do you really want to reset the settings to their standard values?</string>
+    <string name="successfullyReset">Reset successfully</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="reset">Reset</string>
+    <string name="resetTitle">Reset settings</string>
+    <string name="resetSummary">Reset settings to their standard values.</string>
+    <string name="remoteSettings">Stream settings</string>
+    <string name="resolutionDialogTitle">Resolution</string>
+    <string name="resolutionTitle">Resolution</string>
+    <string name="fpsDialogTitle">FPS</string>
+    <string name="fpsTitle">FPS</string>
+    <string name="gamepadRefreshRateTitle">Gamepad refresh rate</string>
+    <string name="bitrateDialogTitle">Bitrate</string>
+    <string name="bitrateTitle">Bitrate</string>
+    <string name="streamingGamepadLayout">Streaming gamepad layout</string>
+    <string name="autoHideButtonTitle">Auto hide buttons</string>
+    <string name="autoHideButtonSummary">Select to automatically auto hide gamepad buttons.</string>
+    <string name="showTriggerButtonTitle">Show trigger buttons</string>
+    <string name="showOnScreenGamepadLayoutSummary">Show virtual on-screen gamepad layout on touchscreen</string>
+    <string name="showOnScreenGamepadLayoutTitle">Show on-screen gamepad layout</string>
+    <string name="useVolumeKeysSummary">Select to use volume keys as gamepad buttons.</string>
+    <string name="useVolumeKeysTitle">Use volume keys</string>
+    <string name="pictureInPictureSummary">The stream can be viewed (but not controlled) while the app is minimized.</string>
+    <string name="pictureInPictureTitle">Enable Picture-in-Picture mode</string>
+    <string name="showTriggerButtonSummary">Select to show trigger buttons (L3/ R3) on the standard onscreen gamepad layout.</string>
+    <string name="audio">Audio</string>
+    <string name="audioTitle">Audio mode</string>
+    <string name="audioDialogTitle">Audio source</string>
+    <string name="audio_buffer_size_title">Audio buffer size</string>
+    <string name="audio_buffer_size_subtitle">Minimum latency suits most devices; larger buffers can reduce crackling on slower or unstable hardware.</string>
+    <string name="audio_buffer_size_dialog_title">Audio buffer size</string>
+    <string name="audio_buffer_size_row_summary">%1$s\n%2$s</string>
+    <string name="audio_swap_stereo_channels_title">Swap stereo channels</string>
+    <string name="audio_swap_stereo_channels_summary">Play left-channel audio on the right speaker and right-channel audio on the left speaker.</string>
+    <string name="errorCode">ErrorCode: </string>
+    <string name="responseAnotherUserIsConnected">Another user is already using RemotePlay. If you recently disconnected from the %1$s, please wait a few seconds and try again later.</string>
+    <string name="responseCodeCrashText">The RemotePlay process on the %1$s crashed</string>
+    <string name="responseCodeRegisterFailedText">Registration failed, please check your PIN.</string>
+    <string name="responseCodeWrongPSNAccountDetailsText">Wrong PSN Account details</string>
+    <string name="psFound">Console found</string>
+    <string name="psNotFound">Console not found, please try again.</string>
+    <string name="psNotFoundTryAgainTitle">%s not found!</string>
+    <string name="psNotFoundTryAgain">Be sure you are connected to the same network as your %1$s. If this repeats, enter your %1$s IP in \"Advanced Settings\".</string>
+    <string name="psNotFoundLocalPsnTryAgain">Be sure you are connected to the same network as your %1$s. If this repeats, enter your %1$s IP in \"Advanced Settings\".\n\nWould you like to try again with following PSN credentials:\nPSN-Online-ID:\n%2$s\nPSN-Account-ID:\n%3$s</string>
+    <string name="registrationSuccessful">Registration successful</string>
+    <string name="noStoredPsInfo">Error, no stored PS5/ PS4 information. Please register PXPlay with your PS5/ PS4.</string>
+    <string name="pleaseProvideRpRegistrationNumber">Please provide the 8 digit registration number</string>
+    <string name="openSource">Open source</string>
+    <string name="responseCodeMustUpdate">PXPlay is no longer working with the %1$s firmware installed on your %1$s.</string>
+    <string name="notAllowedRemotePlayActivity">A game or app is currently running on your %1$s which prevents remote play. Please close all running applications on your %1$s.</string>
+    <string name="wrongPSRemotePlayCredentials">Could not connect to the %1$s, credentials are incorrect. Are you sure you have selected the correct %1$s profile in the PXPlay app?</string>
+    <string name="stillConnected">Please wait a few seconds and try again later. If the error persists, please restart PXPlay.</string>
+    <string name="couldNotLoginTitle">Login error</string>
+    <string name="couldNotLogin">Cannot login to the %1$s.</string>
+    <string name="couldNotGetProfileTitle">Could not get profile info</string>
+    <string name="couldNotGetProfile">There was a problem to obtain your PSN profile information</string>
+    <string name="accessDeniedTitle">Access denied</string>
+    <string name="accessDenied">Could not request PSN-Profile info. Access denied.\n\nPlease restart PXPlay and try again.\n\nIf it is still not working please feel free to contact me. </string>
+    <string name="shareLog">Share log file</string>
+    <string name="noLogFile">No log file available</string>
+    <string name="tv_share_log_qr_preparing">Preparing secure download…</string>
+    <string name="tv_share_log_qr_title">Scan to download the log file</string>
+    <string name="tv_share_log_qr_subtitle">Use a phone on the same Wi‑Fi network as this TV.</string>
+    <string name="tv_share_log_qr_close">Close</string>
+    <string name="tv_share_log_qr_error_no_network">Could not find a local network address. Connect this device to Wi‑Fi and try again.</string>
+    <string name="tv_share_log_qr_error_server">Could not start the temporary download server. Please try again.</string>
+    <string name="tv_share_log_qr_failed">Could not create the QR code. You can type the address below in your phone\'s browser instead.</string>
+    <string name="unexpectedErrorOccurred">An unexpected error occurred!</string>
+
+    <string name="licences1">By proceeding you agree with</string>
+    <string name="licences2">\nand</string>
+    <string name="eula">EULA</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="privacyPolicyLink">https://streamingdv.github.io/privacy/pxplay_privacy_policy.html</string>
+    <!-- Same documentation root as legacy HelpActivity (external browser in Compose app) -->
+    <string name="help_faq_url" translatable="false">https://streamingdv.github.io/pxplay/index.html</string>
+    <string name="understandUsage">I accept the Privacy Policy\nand I understand that I need\na console to use PXPlay.</string>
+    <string name="getStarted">GET STARTED</string>
+
+    <string name="noInternetConnection">No internet connection</string>
+    <string name="noInternetConnectionText">PXPlay needs an internet connection when you start the app. Please click OK, connect to the internet and try again.</string>
+    <string name="acceptRequirement">Please accept the requirement</string>
+
+    <string name="rateMyAppTitle">Do you like PXPlay?</string>
+    <string name="rateMyApp">If you enjoy PXPlay, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
+    <string name="maybeLater">Maybe later</string>
+    <string name="ratePSPlay">Rate PXPlay</string>
+
+
+    <string name="orientationSettingsTitle">Orientation</string>
+    <string name="orientationTypeDialogTitle">Orientation types</string>
+    <string name="orientationTypeTitle">Gamepad mode orientation</string>
+    <string name="gamepad_mode_landscape_required_message">Please rotate your device to landscape mode to use gamepad mode.</string>
+
+    <string name="general">General</string>
+    <string name="vibrateOnDownSummary">Enables vibration on action down.</string>
+    <string name="vibrateOnDownTitle">Vibrate on action down</string>
+    <string name="vibrateOnUpSummary">Enables vibration on action up.</string>
+    <string name="vibrateOnUpTitle">Vibrate on action up</string>
+
+    <string name="touchBehaviour">Touch behaviour</string>
+    <string name="touchOptimizationTitle">Touch optimization</string>
+    <string name="touchOptimizationSummary">Enables touch optimization to decrease erroneous inputs.</string>
+
+    <string name="behaviour">Behaviour</string>
+    <string name="vibrationTitle">Vibrate</string>
+    <string name="touch">Touch</string>
+    <string name="inputModeTitle">Input mode</string>
+    <string name="inputModeDialogTitle">Input modes</string>
+    <string name="processTouchXSummary">Select if the X-Axis should be processed.</string>
+    <string name="processTouchXTitle">Process X-Axis</string>
+    <string name="processTouchYSummary">Select if the Y-Axis should be processed.</string>
+    <string name="processTouchYTitle">Process Y-Axis</string>
+    <string name="slowlyReturnToCenterSummary">Select if the joystick should slowly return to center</string>
+    <string name="slowlyReturnToCenterTitle">Slowly return to center</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="processAccelXSummary">Select if the X-Axis should be processed.</string>
+    <string name="processAccelXTitle">Process X-Axis</string>
+    <string name="processAccelYSummary">Select if the Y-Axis should be processed.</string>
+    <string name="processAccelYTitle">Process Y-Axis</string>
+    <string name="sensitivityAccelSummary">Higher number means less sensitive.</string>
+    <string name="sensitivityAccelTitle">Sensitivity</string>
+    <string name="thresholdAccelSummary">Threshold value to reduce noise data.</string>
+    <string name="thresholdAccelTitle">Threshold</string>
+    <string name="lowPassAccelSummary">Low Pass filter to remove sensor data outliers.\nHigher value means more noisy but more accurate.</string>
+    <string name="lowPassAccelTitle">Low Pass Filter</string>
+    <string name="autoReturnTitle">Auto return to center</string>
+    <string name="autoReturnSummary">Select if the analog stick should automatically return to the centralised position.</string>
+    <string name="highAccuracySummary">Improves the analog stick accuracy but can increase bandwidth.</string>
+    <string name="highAccuracyTitle">High accuracy</string>
+
+    <string name="mainGamepadAnalogDeadZoneTitle">Main analog stick dead zone</string>
+    <string name="mainGamepadAnalogDeadZoneSummary">Dead zone for the main (left) stick on your connected controller. Increase it if that stick drifts when you are not touching it.</string>
+    <string name="secondGamepadAnalogDeadZoneTitle">Second analog stick dead zone</string>
+    <string name="secondGamepadAnalogDeadZoneSummary">Dead zone for the second (right) stick on your connected controller. Increase it if that stick drifts when you are not touching it.</string>
+
+    <string name="eightDirectionsSummary">Activate to enable eight digital pad directions.</string>
+    <string name="eightDirectionsTitle">Eight directions</string>
+
+    <string name="allowMovementSummary">Enables movement on touchpad.</string>
+    <string name="allowMovementTitle">Allow touchpad movements</string>
+
+    <string name="toggleTouchModeTitle">Toggle touch mode</string>
+    <string name="toggleTouchModeSummary">Enables toggle touch mode for buttons.</string>
+    <string name="individualToggleTouchModeTitle">Individual toggle touch mode</string>
+    <string name="individualToggleTouchModeSummary">Configure toggle behavior for specific button groups when global toggle mode is disabled.</string>
+
+    <string name="menuButtonsTitle">Menu buttons</string>
+    <string name="psButtonsTitle">PS button</string>
+    <string name="touchpadTitle">Touchpad</string>
+    <string name="triggerButtonsTitle">L3/ R3 buttons</string>
+    <string name="shoulderButtonsTitle">L1/ R1 buttons</string>
+    <string name="volumeButtonsTitle">L2/ R2 buttons</string>
+    <string name="actionButtonSettingsTitle">Action buttons</string>
+    <string name="digitalSettingsTitle">D-Pad</string>
+    <string name="mainAnalogSettingsTitle">Main analog stick</string>
+    <string name="secondAnalogSettingsTitle">Second analog stick</string>
+    <string name="touchSettingsTitle">Touch</string>
+
+    <string name="back">Back</string>
+    <string name="illegalArgumentException">Please check your %s registration address. Hint: please enter an address without a port, \"http://\" or \"https://\" prefix.</string>
+    <string name="advanced_settings">Advanced settings</string>
+    <string name="portForwarding">Configure router</string>
+    <string name="portForwardingHint">To automatically configure your home network for internet play, you must be connected to the same Wi-Fi network as your console, and the console must be turned on.\n\nPXPlay will try to connect to your router and set everything up automatically.\n\nThis may fail on some routers due to security restrictions. If that happens, you will receive further instructions.</string>
+    <string name="portForwardingAttentionPlain">Attention - please read carefully</string>
+    <string name="portForwardingSetupSummary">PXPlay can try to automatically configure your router for internet play.</string>
+    <string name="portForwardingRequirementSameNetwork">Use the same Wi-Fi network as your console.</string>
+    <string name="portForwardingRequirementConsoleOn">Your console must be turned on.</string>
+    <string name="portForwardingRequirementMayFail">Many routers block automatic setup, manual port forwarding may be required.</string>
+    <string name="portForwardingImportantDetailsTitle">Important details</string>
+    <string name="searchingRouter">Finding router…</string>
+    <string name="configuringRouter">Configuring router…</string>
+    <string name="getPublicIp">Initialising…</string>
+    <string name="unknownException">Unknown exception</string>
+    <string name="enterIpAddress">Enter IP address</string>
+    <string name="ipAddress">IP address</string>
+    <string name="localIpAddress">Local IP address</string>
+    <string name="remoteIpAddress">Remote IP address</string>
+    <string name="manual_ip_remote_options_message">You can wake the console first so it is ready to connect, or connect immediately if it is already on.</string>
+    <string name="manual_ip_connect">Connect</string>
+    <string name="manual_ip_wake_and_connect">Wake &amp; Connect</string>
+
+    <string name="configureForInternetPlay">Configure internet access</string>
+    <string name="useWiFiTitle">Use a WiFi connection</string>
+    <string name="useWiFi">WiFi is currently not enabled.\n\nIn order to automatically configure your router for playing over the internet your PS5/ PS4 must be on the same network than your device.</string>
+
+    <string name="routerNotFoundTitle">Router not found. Error: 0x15</string>
+    <string name="routerNotFound">Please be sure UPnP is enabled on your router. If UPnP is not enabled you will not be able to automatically configure your router for playing over the internet. On some routers UPnP could be buggy and not working properly, if you have problems to automatically configure your router you must configure it manually to be able to play over the internet if you do not want to enable automatic remote connection in the streaming settings.\n\nYou can find more information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+    <string name="portForwardingErrorOccurredTitle">An error occurred. Error: 0x00</string>
+    <string name="portForwardingErrorOccurred">An unknown error occurred. Be sure you are connected to same WiFi network than your console. Automatically configuring your router for playing over the internet is not allowed on all networks.\n\nError type: %1$s\nError code: %2$s\nError description: %3$s</string>
+
+    <string name="psNotFoundPortForwardTitle">Console not found</string>
+    <string name="psNotFoundPortForward">The console was not found. Please be sure that your device is connected to the same network as your console and that your console is turned on.\n\nWould you like to enter the IP-Address of your console manually?</string>
+    <string name="multiplePSConsolesFoundTitle">Multiple consoles found.\nPlease select one:</string>
+    <string name="multipleUpnpDevicesConsolesFoundTitle">Multiple router devices found.\nPlease select one:</string>
+
+    <string name="psPortForwardedSuccessfullyTitle">Router successfully configured</string>
+    <string name="psPortForwardedSuccessfully">Successfully configured your router for playing over the internet.\n\nYou may have to repeat this process whenever the IP of your console has been changed.\n\nIn case of any connection problems you have to check the port forwarding settings on your router manually. You can find all information here https://streamingdv.github.io/pxplay/index.html#line5</string>
+
+    <string name="psPortForwardedNotSuccessfullyTitle">Could not automatically configure router. Error: 0x16</string>
+    <string name="psPortForwardedNotSuccessfully">Failed to automatically configure your router for playing over the internet.\n\nYour router does not allow an automatic configuration. You must set up port forwarding manually. You can find all information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+
+    <string name="psPortForwardedPartiallySuccessfullyTitle">Router partially configured. Warning: 0x05</string>
+    <string name="ps4PortForwardedPartiallySuccessfully">Your router did not allow to create all rules for playing over the internet. You can play remotely but you will not be able to wake up your PS4 while you are not at home.\n\nYou have to set up port forwarding manually on your router for port 987 UDP protocol. You can find all information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+
+    <string name="publicIpWarningTitle">Different public IPs detected. Warning: 0x06</string>
+    <string name="publicIpWarning">Your router returned a different public IP-Address than expected. This could be an indication that your internet provider does not give your router a real public IP-Address, or that you have a double NAT configuration (your router is behind another router which creates two different networks) or that you are using a hybrid router with two different network technologies like DSL and LTE.\n\nThe latter should not be a problem, however if you have a double NAT configuration at home or if your internet provider does not provide your router a real public IPv4, playing over the internet will probably not be possible for you. You can find further information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+
+    <string name="ipv6WarningTitle">Your router has no IPv4-Address. Warning: 0x07</string>
+    <string name="ipv6Warning">It seems your router has no IPv4-Address. If your internet provider does not give your router a real public IPv4-Address you can not connect to your console while you are away. Please check manually on the configuration interface of your router if this is the case. If your router only has an IPv6-Address you could contact your provider and ask if they could provide you a public IPv4-Address.\n\nYou can find further information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+    <string name="psPortForwardedUnknownErrorTitle">An unknown error occurred. Error: 0x17</string>
+    <string name="psPortForwardedUnknownError">The configuration failed because of an unknown error. Your router may not fully support UPnP which is required to automatically set up port forwarding. You must configure your router manually.\n\nYou can find all information here https://streamingdv.github.io/pxplay/index.html#line6</string>
+
+    <string name="waitWhileConfiguring">Please wait while your router is being configured!</string>
+
+    <string name="pleaseDisableMultiWindowMode">Please disable multi window mode</string>
+    <string name="multiWindowNotAllowed">Multi window mode not allowed</string>
+    <string name="pswarningMessageTitle">DO NOT UPDATE YOUR %s</string>
+    <string name="pswarningMessage">PXPlay will not work with the newest firmware version.\n\nIf you are using the latest %s firmware version, please be patient until a new update of PXPlay will be released.</string>
+
+    <string name="button_mapping_save_success">Mapping saved</string>
+    <string name="button_mapping_reset_success">Mapping reset</string>
+    <string name="button_mapping_no_controller_title">No controller connected</string>
+    <string name="button_mapping_no_controller_message">Connect a supported controller to configure button mappings. This screen updates when a controller is connected.</string>
+    <string name="button_mapping_unknown_controller">Unknown controller</string>
+    <string name="button_mapping_controller_heading">Controller</string>
+    <string name="button_mapping_save">Save mapping</string>
+    <string name="button_mapping_reset">Reset mapping</string>
+    <string name="button_mapping_capture_hint_standard">Press and hold a button a few seconds, or press two buttons together.</string>
+    <string name="button_mapping_capture_hint_dpad">Press a D-pad direction, or hold a button as for a standard mapping.</string>
+    <string name="button_mapping_capture_hint_joystick">Move the joystick in the direction shown on screen.</string>
+    <string name="button_mapping_capture_hint_hotkey">Press two buttons for this touchpad shortcut.</string>
+    <string name="button_mapping_capture_detected">Detected: %1$s</string>
+    <string name="button_mapping_discard_title">Discard changes?</string>
+    <string name="button_mapping_discard_message">You have unsaved controller mapping changes. Do you want to discard them?</string>
+    <string name="button_mapping_discard_confirm">Discard</string>
+    <string name="button_mapping_discard_cancel">Keep editing</string>
+    <string name="button_mapping_reset_confirm_title">Reset mapping?</string>
+    <string name="button_mapping_reset_confirm_message">This will remove the saved mapping for the currently selected controller.</string>
+    <string name="button_mapping_reset_confirm_action">Reset</string>
+    <string name="button_mapping_capture_status">Capturing</string>
+    <string name="button_mapping_capture_seconds">%1$d s</string>
+    <string name="button_mapping_value_empty">—</string>
+    <string name="mapping_target_cross">Cross</string>
+    <string name="mapping_target_circle">Circle</string>
+    <string name="mapping_target_square">Square</string>
+    <string name="mapping_target_triangle">Triangle</string>
+    <string name="mapping_target_options">Options</string>
+    <string name="mapping_target_share">Share</string>
+    <string name="mapping_target_l1">L1</string>
+    <string name="mapping_target_r1">R1</string>
+    <string name="mapping_target_l2">L2</string>
+    <string name="mapping_target_r2">R2</string>
+    <string name="mapping_target_l3">L3</string>
+    <string name="mapping_target_r3">R3</string>
+    <string name="mapping_target_touchpad">Touchpad</string>
+    <string name="mapping_target_ps">PS</string>
+    <string name="mapping_target_dpad_up">D-pad up</string>
+    <string name="mapping_target_dpad_left">D-pad left</string>
+    <string name="mapping_target_dpad_down">D-pad down</string>
+    <string name="mapping_target_dpad_right">D-pad right</string>
+    <string name="mapping_target_main_stick_up">Left stick up</string>
+    <string name="mapping_target_main_stick_right">Left stick right</string>
+    <string name="mapping_target_second_stick_up">Right stick up</string>
+    <string name="mapping_target_second_stick_right">Right stick right</string>
+    <string name="mapping_target_tp_swipe_up">Touchpad swipe up</string>
+    <string name="mapping_target_tp_swipe_right">Touchpad swipe right</string>
+    <string name="mapping_target_tp_swipe_down">Touchpad swipe down</string>
+    <string name="mapping_target_tp_swipe_left">Touchpad swipe left</string>
+    <string name="mapping_target_tp_click_right">Touchpad click right</string>
+    <string name="mapping_target_tp_click_center">Touchpad click center</string>
+    <string name="mapping_target_tp_click_left">Touchpad click left</string>
+    <string name="mapping_target_microphone">Microphone button</string>
+    <string name="mapping_target_exit_stream">Exit Stream button</string>
+
+    <string name="multipleGamepadsFoundTitle">Select gamepad for mapping</string>
+    <string name="pleaseWait">Please wait…</string>
+    <string name="checkForUpdates">Check for Updates</string>
+    <string name="newVersionAvailableTitle">Update Available</string>
+    <string name="newVersionAvailableSummary">A new version of PXPlay is available!</string>
+    <string name="newestVersionInstalledTitle">You\'re Up-to-Date</string>
+    <string name="newestVersionInstalledSummary">You already have the latest version of PXPlay installed.</string>
+    <string name="linkingYourConsole">Linking your console…</string>
+    <string name="testingConnection">Testing connection…</string>
+    <string name="connecting">Connecting…</string>
+    <string name="registering">Registering…</string>
+    <string name="connectingViaTheInternet">Connecting via the internet…</string>
+    <string name="registeringViaTheInternet">Registering via the internet…</string>
+    <string name="couldTakeAFewMinutes">Could take a few minutes</string>
+
+    <string name="touchpadThresholdTitle">Touchpad click threshold</string>
+    <string name="touchpadThresholdSummary">Defines the number of pixels you can move your finger on the onscreen touchpad until a movement gesture will be recognized. If clicking on the onscreen touchpad is often not recognized on your device you should increase the threshold.</string>
+    <string name="useSoftwareDecoderTitle">Use software decoder</string>
+    <string name="useSoftwareDecoderSummary">Attention: it is not recommended to enable this setting. This should only be used if you have problems with your hardware decoder on your device. Using a software decoder is usually a lot slower than using a hardware decoder. This could lead to artifacts in the stream, lags and maybe even to crashes on some devices.</string>
+    <string name="softwareDecoderWarningTitle">Software decoder warning</string>
+    <string name="softwareDecoderWarningSummary">You are using a software decoder that can negatively impact streaming performance and quality. You can deactivate the use of a software decoder in the \"Remote\" settings of PXPlay. The recommended streaming settings for software decoders are a maximum resolution of 540p and 30 FPS.</string>
+
+    <string name="pleaseInstallABrowser">Please install a Browser on your device!</string>
+
+    <string name="useCompatibilityModeTitle">Compatibility mode</string>
+    <string name="useCompatibilityModeSummary">Use a conservative decoder setup to reduce freezes on some devices. Applies only to H.264 and has no effect with HEVC. Turns off internal PXPlay tweaks for better compatibility. If freezing continues, try changing the \"Decoder Performance Mode\" or enable \"Bitstream parsing\". As a last fallback, enable the \"Software Decoder\".</string>
+    <string name="logFileContentCopiedToClipboardTitle">Copied to clipboard</string>
+    <string name="logFileContentCopiedToClipboardMessage">The log file content of PXPlay was copied to your clipboard as no application was found to share the log file. You could paste it manually in another program to share it.</string>
+
+    <string name="psnLoginErrorWarningTitle">Can\'t sign in to PSN?</string>
+    <string name="psnLoginErrorWarning">Having trouble signing in to PSN or seeing errors like \"Connection to the server could not be established\"? If sign-in doesn\'t work, you can find alternative methods here:\n\nhttps://streamingdv.github.io/pxplay/index.html#line8</string>
+
+    <string name="videoFormatTitle">Video stream format</string>
+    <string name="videoFormatDialogTitle">Video stream format</string>
+    <string name="permissionNotGranted">Permission not granted!</string>
+
+    <string name="onscreenOverlayOpacityTitle">Transparency</string>
+    <string name="onscreenOverlayOpacitySummary">The transparency of the onscreen gamepad overlay. The lower the number, the less visible.</string>
+    <string name="couldNotStartAudioRecord">Could not start audio recording!</string>
+    <string name="showMicrophoneButtonTitle">Show microphone button</string>
+    <string name="showMicrophoneButtonSummary">Show the microphone button on the onscreen gamepad layout</string>
+    <string name="ignoreNotchTitle">Ignore display notch</string>
+    <string name="ignoreNotchSummary">If activated the video stream will be displayed under the display notch and will use the full screen size if either video stream format \"Zoomed\" or \"Stretched\" is activated. If your device does not have a display notch this setting does not have any effect.</string>
+
+    <string name="whichPS4Firmware">Which firmware is installed on your PS4?</string>
+
+    <string name="terminateRemotePlaySession">Terminate Remote Play session?</string>
+    <string name="putTheConsoleInRestMode">Put the console in rest mode</string>
+
+    <string name="stopWithDoubleClickTitle">Stop streaming with double click</string>
+    <string name="stopWithDoubleClickSummary">Stop streaming by double-clicking the back button on your device or on your remote control.</string>
+    <string name="selectConsoleType">Select the console you want to register</string>
+    <string name="ps4" translatable="false">P-Station 4</string>
+    <string name="ps5" translatable="false">P-Station 5</string>
+
+    <string name="streamingOrientationTypeTitle">Streaming mode orientation</string>
+
+    <string name="useWiFiPerformanceModeTitle">Use WiFi performance mode</string>
+    <string name="useWiFiPerformanceModeSummary">Tells Android to enable WiFi performance mode in order to achieve best streaming results. Could lead to Bluetooth delay problems on some devices. Deactivate WiFi performance mode only if you encounter Bluetooth delay problems.</string>
+
+    <string name="alwaysRequestKeyFrameTitle">Always request keyframe</string>
+    <string name="alwaysRequestKeyFrameSummary">Always request a keyframe from the console when a video frame is lost in transit. Might help reduce artifacts, but could introduce lag and stuttering on unstable networks.\n\nPlease note: This setting can drastically increase the bandwidth requirement.</string>
+
+
+    <string name="ps5Settings">PS5 settings</string>
+
+    <string name="hevcDecoderTitle">HEVC decoder</string>
+    <string name="hevcDecoderSummary">If you have a modern device you can try to enable the HEVC decoder which is optimized for PS5 streaming. If you have problems with the HEVC decoder don\'t enable it.</string>
+
+    <string name="hdrTitle">HDR</string>
+    <string name="hdrSummary">Enable HDR for PS5 streaming. If you experience lags or other problems on your device while streaming don\'t enable HDR.</string>
+
+    <string name="motionSensorSettingsTitle">Motion sensor</string>
+    <string name="motionSensorBehaviour">Motion sensor behaviour</string>
+    <string name="motionSensorTitle">Emulate motion sensor</string>
+    <string name="motionSensorSummary">Enables DualShock/ DualSense motion sensor emulation with the available device sensors.</string>
+
+    <string name="motionSensorWarning">Hint: your device does not have the necessary hardware to emulate the motion sensor events of a DualShock / DualSense controller.</string>
+
+    <string name="vibrationSensorSettingsTitle">Vibration sensor</string>
+    <string name="vibrationSensorBehaviour">Vibration sensor behaviour</string>
+    <string name="vibrationSensorTitle">Emulate vibration sensor</string>
+    <string name="vibrationSensorSummary">Enables DualShock vibration sensor emulation with the available device vibration motors.</string>
+
+    <string name="notSupportedByDeviceHardware">Not supported by your device\'s hardware</string>
+
+
+    <string name="couldNotOpenNativeGamepad">USB Gamepad could not be connected!</string>
+    <string name="couldNotRequestUsbPermission">Could not request USB permission!</string>
+    <string name="couldNotClaimNativeGamepad">Could not claim USB gamepad!</string>
+
+    <string name="warningAndroid11Title">Android 11 Warning!</string>
+    <string name="warningAndroid11Message">There is currently an official Bug on Android 11 introduced by Google which makes using gamepads impossible on the whole system. Not all Android 11 users are affected, but it seems that this has something to do with some enabled accessibility services on your device. Disabling them sometimes fixes the error. Please note that this is not PXPlay\'s fault. You can find the official Google bug report with some suggestions on how to fix this bug on your device here:\n\nhttps://issuetracker.google.com/issues/163120692?pli=1</string>
+
+    <string name="nativeGamepadSettings">Native gamepad settings</string>
+
+    <string name="nativeGamepadModeTitle">Enable native USB gamepad mode</string>
+    <string name="nativeGamepadModeSummary">If the native gamepad mode is enabled, additional functions of your gamepad can be used on Android. Features like rumble, or gyroscope and Touchpad of your DualSense/ DualShock controller can be used if your gamepad is connected via USB. Native USB gamepad mode is currently supported for following gamepads: DualSense, DualShock, Thrustmaster eswap Pro</string>
+
+    <string name="nativeGamepadDualshockColorTitle">Gamepad Light Bar color</string>
+    <string name="nativeGamepadDualshockColorSummary">Choose your controller’s light bar color (if supported). Please note: The color will update after you connect PXPlay to your PS5 / PS4.</string>
+    <string name="nativeGamepadRemotePlayLightBarTitle">Show Light Bar colors from console</string>
+    <string name="lightBarBehaviorIgnore">Ignore</string>
+    <string name="lightBarBehaviorControllerOnly">Controller only</string>
+    <string name="lightBarBehaviorControllerAndUi">Controller + UI</string>
+    <string name="lightBarBehaviorUiOnly">UI only</string>
+
+
+    <string name="chooseAsDefaultProfileTitle">Choose as default layout?</string>
+    <string name="chooseAsDefaultProfile">Would you like to select this created layout as the default layout?</string>
+    <string name="redditLink" translatable="false">https://www.reddit.com/r/PSPlay/hot</string>
+    <string name="streamingdvLink" translatable="false">https://streamingdv.com/shop-list-ns.html</string>
+
+    <string name="enableHapticFeedbackTitle">Haptic feedback mode (PS5 only)</string>
+
+    <string name="bitrateManualDialogTitle">Fixed bitrate value</string>
+    <string name="bitrateManualSummary">The fixed bitrate value.\nCurrent value: %s\nWARNING: It is highly recommended to set the bitrate value to \"Auto\". Otherwise, the overall streaming experience may suffer.</string>
+    <string name="connection_mode_title">Connection mode</string>
+    <string name="remote_play_default_console_name">Console</string>
+    <string name="connection_mode_question">How do you want to connect remotely?</string>
+    <string name="automatic_psn">Automatic (PSN)</string>
+    <string name="manual_ip">Manual (IP)</string>
+    <string name="psnCredentialsExpiredTitle">PSN credentials expired</string>
+    <string name="psnCredentialsExpiredSummary">Your PSN credentials have expired. Please log in again to establish a remote connection.</string>
+    <string name="wrongPsnCredentialsTitle">Wrong PSN credentials</string>
+    <string name="wrongPsnCredentialsSummary">The PSN credentials you entered do not match your currently selected console.</string>
+    <string name="connectToWhichPs5Title">Multiple consoles found. Which console do you want to connect to:</string>
+    <string name="noPsConsoleFoundTitle">No console found</string>
+    <string name="noPsConsolesFoundSummary">No consoles found. Ensure your console is online and connected to PSN. Try refreshing your PSN login via the Profile settings.</string>
+    <string name="remoteConnectionTimeoutTitle">Remote connection timeout</string>
+    <string name="remoteConnectionTimeoutSummary">The remote connection is taking longer than usual. It is recommended to stop the connection process and try again. If you receive this warning several times please restart your console.</string>
+    <string name="holePunchNotSuccessfulTitle">Console not reachable</string>
+    <string name="holePunchNotSuccessfulSummary">Your console could not be reached via the internet. It seems that the network you are currently connected with is not allowing a connection to your console. Please connect to a different network.</string>
+    <string name="psNatType3">Your console has NAT Type 3. A remote connection may not be possible.</string>
+    <string name="remoteConnectionSummary">Activate the automatic remote connection feature. This feature is currently experimental, and it may not work in all network environments. Once activated you can connect remotely without configuring your router. Please note: PSN credentials are needed and your console must have the newest firmware installed.</string>
+    <string name="remoteConnectionTitle">Automatic remote connection</string>
+    <string name="psn_troubleshoot_step_browser_title">Step 1: Sign in in the browser</string>
+    <string name="psn_troubleshoot_step_browser_summary">Tap the button and sign in on the login webpage, then stop at the white redirect page and copy the URL from the address bar.</string>
+    <string name="psn_troubleshoot_step_browser_details">On the opened PSN login page, sign in with the same account you use on your console and want to use with PXPlay for Remote Play. After a successful login in the external browser, you will see a white redirect page. Stop there and get ready to copy the URL from the address bar in the next step.</string>
+    <string name="psn_troubleshoot_step_paste_title">Step 2: Paste the redirect URL</string>
+    <string name="psn_troubleshoot_step_paste_summary">After a successful login, paste the URL from the white redirect page in your browser (opened in the previous step) into the field below.</string>
+    <string name="psn_troubleshoot_show_more">Show details</string>
+    <string name="psn_troubleshoot_show_less">Hide details</string>
+    <string name="openPsnLoginWebsite">Open PSN login website</string>
+    <string name="tv_psn_login_web_cursor_zone">PSN sign-in page. D-pad moves the pointer; press Select to click.</string>
+    <string name="psnRedirect">PSN login redirect URL</string>
+    <string name="tv_psn_troubleshoot_step_1">Open the PSN login page using the button below.</string>
+    <string name="tv_psn_troubleshoot_step_2">Sign in with the account you use for Remote Play.</string>
+    <string name="tv_psn_troubleshoot_step_3">On the white redirect page, use the address shown in the bar as your redirect URL and copy it.</string>
+    <string name="tv_psn_troubleshoot_redirect_heading">Redirect URL</string>
+    <string name="tv_psn_troubleshoot_intro">Paste the URL from the white redirect page after a successful login to the text field below.</string>
+    <string name="tv_psn_troubleshoot_open_browser">Open PSN login in browser</string>
+    <string name="tv_psn_troubleshoot_paste">Paste from clipboard</string>
+    <string name="tv_psn_troubleshoot_paste_invalid">Clipboard does not contain a valid web address.</string>
+    <string name="generalGamepadSettings">General gamepad settings</string>
+    <string name="enableGamepadRumbleTitle">Activate rumble</string>
+    <string name="enableGamepadRumbleSummary">When this setting is enabled, all supported gamepads connected via native USB gamepad mode or connected to an Android 12+ device will rumble.</string>
+    <string name="logging">Logging</string>
+    <string name="verboseLoggingTitle">Verbose logging</string>
+    <string name="verboseLoggingSummary">If activated, a lot is logged in the background. This should NOT be activated for regular use.</string>
+    <string name="relativeAnalogStickPositionTitle">Relative Analog-Stick positions</string>
+    <string name="relativeAnalogStickPositionSummary">When enabled, left and right analog stick are positioned using touch coordinates. Please note: This is only supported in landscape mode.</string>
+    <string name="aspectRatioButtonTitle">Aspect ratio button</string>
+    <string name="aspectRatioButtonSummary">Show a button to change screen ratio during a remote play session</string>
+    <string name="compact_stream_area_mode_title">Compact stream area mode</string>
+    <string name="compact_stream_area_mode_row_summary">Limit the stream to half the screen height. In landscape, this only applies when enough vertical space is available. Useful for foldable or dual-screen devices.\n\n%1$s</string>
+    <string name="showPortraitOnScreenControlsTitle">Show portrait on-screen controls</string>
+    <string name="showPortraitOnScreenControlsSummary">Display the full on-screen controller layout in portrait mode. When disabled, only essential controls remain visible.</string>
+    <string name="streamPerformanceOverlayTitle">Stream performance overlay</string>
+    <string name="streamPerformanceOverlaySummary">Show streaming stats as an overlay (resolution, bitrate, RTT, packet loss, decode time)</string>
+    <string name="video_format_content_desc_keep">Video layout: fit to screen (keep aspect ratio)</string>
+    <string name="video_format_content_desc_stretch">Video layout: stretch to fill</string>
+    <string name="video_format_content_desc_zoom">Video layout: zoom / crop to fill</string>
+    <string name="video_format_content_desc_16_10">Video layout: fixed 16:10 frame</string>
+    <string name="video_format_content_desc_18_9">Video layout: fixed 18:9 frame</string>
+    <string name="video_format_content_desc_21_9">Video layout: fixed 21:9 frame</string>
+    <string name="video_format_content_desc_4_3">Video layout: fixed 4:3 frame</string>
+
+    <string name="xboxRemotePlayTitle">Interested in XBox Remote Play?</string>
+    <string name="xboxRemotePlaySummary">Would you like to enjoy XBox Remote Play with 1080p support, XBox 360 gaming support, customizable onscreen gamepad layout and other cool benefits?</string>
+
+    <string name="psplayPortsHintTitle">PXPlay Now on Windows Linux &amp; Mac!</string>
+    <string name="psplayPortsHintSummary">Experience PXPlay on your Windows, Linux or Mac PC! Unlock new gaming possibilities on your PC or Handheld device. Get your license and elevate your gameplay!</string>
+
+    <string name="sure">Yes, absolutely!</string>
+    <string name="noThanks">No thanks</string>
+
+    <string name="remotePlayDisabled">Remote Play is disabled on your console.</string>
+    <string name="experimental">Experimental</string>
+
+    <string name="videoFrameRateBufferTitle">Buffered video frames</string>
+
+    <string name="dualSenseMappingTypeTitle">Faulty DualSense mapping type</string>
+
+
+    <string name="pleaseProvidePsnUserName">Please provide your PSN username</string>
+    <string name="couldNotQueryAccountIdTitle">Could not query Account-ID</string>
+    <string name="couldNotQueryAccountIdSummary">Unable to query your Account-ID. The service might be temporarily unavailable. Please use the standard PSN-Login method to register your console.</string>
+
+    <string name="buttonPurchasePsPlay">Get PXPlay</string>
+
+
+    <string name="enableGyroResetTitle">Activate Gyro Reset</string>
+    <string name="enableGyroResetSummary">Some games send gyro reset requests to enhance gyro aiming precision. This feature is disabled by default, as it may interfere with gyro input in certain games. Enable it if you want to allow gyro reset functionality for improved aiming in supported titles.</string>
+
+    <string name="currentContentCanNotBeStreamed">Current content can\'t be streamed. Press the PS button to go back to Home Screen</string>
+
+    <string name="videoFramePacingTitle">Video frame pacing</string>
+
+    <string name="renderingSettings">Rendering settings</string>
+    <string name="allowReduceRefreshRateTitle">Allow display refresh rate reduction</string>
+    <string name="allowReduceRefreshRateSummary">Reduce the display refresh rate when using Balanced frame pacing. May save battery but can increase video latency.</string>
+
+    <string name="checkingNetworkType">Checking Network Type…</string>
+    <string name="preparingRemoteSession">Preparing Remote Session…</string>
+    <string name="preparingRemoteRegistration">Preparing Remote Registration…</string>
+
+    <string name="hapticFeedbackVibrationIntensityTitle">Haptic Feedback Rumble Intensity</string>
+    <string name="fsrSuperResolutionSummary">Uses AMD FSR 1.0 to upscale up to 2K/4K with sharpening when supported. Recommended only for powerful devices, may increase battery use.</string>
+    <string name="fsrSuperResolutionTitle">Super Resolution (AMD FSR 1.0)</string>
+    <string name="fsrSharpeningTitle">FSR 1.0 Sharpening</string>
+    <string name="fsrSharpeningSummary">Adjusts sharpening strength for FSR 1.0. Slide right for stronger sharpening; left for none.</string>
+    <string name="fsrSharpeningDisplayMax">Max</string>
+    <string name="fsrSharpeningDisplayOff">Off</string>
+
+    <string name="advancedStreamingSettings">Advanced streaming settings</string>
+
+    <string name="performanceProfileTitle">Decoder Performance Profile</string>
+    <string name="bitstreamParsingTitle">Smart frame recovery (Bitstream parsing)</string>
+    <string name="bitstreamParsingSummary">Analyzes incoming video frames to repair missing references during network hiccups, reducing stutter, visual glitches, and freezes. Uses a little more CPU, turn off if playback worsens or your network is already very stable.</string>
+
+    <string name="upscalingErrorOccurredTitle">Upscaling Error</string>
+    <string name="upscalingErrorOccurred">An error occurred during upscaling. Please restart the stream. If this happens repeatedly, please disable upscaling in the settings.</string>
+    <string name="problems">Problems?</string>
+    <string name="remoteRegistrationFailed">Remote registration failed</string>
+    <string name="remoteRegistrationFailedSummary">Your network may not support remote registration. Try registering locally on your %1$s.\n\nWould you like to try again with the following PSN credentials:\nPSN-Online-ID:\n%2$s\nPSN-Account-ID:\n%3$s</string>
+    <string name="remote_registration_cancel_title">Cancel registration?</string>
+    <string name="remote_registration_cancel_message">Do you want to cancel the remote registration?</string>
+    <string name="remote_registration_disconnecting">Disconnecting…</string>
+    <string name="consoleAlreadyRegistered">Console already registered</string>
+    <string name="invalidPsnAccountId">Enter a valid PSN Account ID (numbers only).</string>
+
+    <!-- Register console bottom sheet (Compose) -->
+    <string name="linkNewConsoleTitle">Link New Console</string>
+    <string name="registrationTypeTitle">Registration Type</string>
+    <string name="registrationModeRemote">Remote</string>
+    <string name="registrationModeLocal">Local</string>
+    <string name="continueToPsnLogin">Continue to PSN Login</string>
+
+    <string name="registrationPinTitle">Registration PIN</string>
+    <string name="registrationPinLabel8Digits">8-Digit PIN</string>
+    <string name="registrationPinSupportingText_ps4">On PS4: Settings -> Remote Play Connection Settings -> Add device</string>
+    <string name="registrationPinSupportingText_ps5">On PS5: Settings -> System -> Remote Play -> Link device</string>
+    <string name="registrationPinErrorInvalidLength">Enter an 8-digit registration PIN</string>
+
+    <string name="accountIdRequired">Account ID is required</string>
+    <string name="psnUsernameRequired">PSN username is required</string>
+
+    <string name="localAdvancedOptionalNetworkAndAccountOptions">Optional network and account options.</string>
+
+    <string name="ipAddressLabel">IP Address</string>
+    <string name="ipAddressLeaveEmptyUsesDefault">Enter your console\'s IP address, or leave it unchanged to detect it automatically on your network.</string>
+
+    <string name="registerMethodTitle">Register Method</string>
+    <string name="localLinkMethodPsnLogin">PSN Login</string>
+    <string name="localLinkMethodPsnUsername">PSN Username</string>
+    <string name="localLinkMethodAccountId">Account ID</string>
+
+    <string name="psnUsernameLabel">PSN Username</string>
+    <string name="psnUsernamePrivacySearchHint">Make sure your PSN privacy settings allow others to find you by search.</string>
+
+    <string name="accountIdLabel">Account ID</string>
+    <string name="psnAccountIdLabel">PSN Account ID</string>
+    <string name="psnAccountIdNumericHint">Enter your PSN Account ID number.</string>
+
+    <string name="remoteRegistrationSectionTitle">Remote registration</string>
+    <string name="remoteRegistrationSectionSummary">Make sure your console is up to date, connected to PSN, and on or in Rest Mode. It may not work in all network environments.</string>
+
+    <string name="consoleSettingsTitle">Settings: %1$s</string>
+    <string name="console_delete_registered_title">Delete %1$s</string>
+    <string name="registered_console_default_name_ps5">P-Station 5</string>
+    <string name="registered_console_default_name_ps4">P-Station 4</string>
+    <string name="console_delete_registered_message">Are you sure you want to delete this registered console from this device?</string>
+    <string name="consoleNameLabel">Console nickname</string>
+    <string name="consoleNameHint">Optional nickname</string>
+    <string name="console_login_pin_label">Login PIN</string>
+    <string name="console_login_pin_hint">4-digit PIN (optional)</string>
+    <string name="connectAsGamepadOnlyTitle">Connect as gamepad only</string>
+    <string name="connectAsGamepadOnlySummary">Enable this if you want to use PXPlay only as a controller for your console without video or audio. This works only for local connections.</string>
+    <string name="auto_connect_on_launch_title">Auto-connect on app launch</string>
+    <string name="auto_connect_on_launch_summary">Automatically connect to this console when PXPlay starts.</string>
+    <string name="auto_connect_on_launch_connection_type_title">Connection type</string>
+    <string name="auto_connect_on_launch_connection_type_summary">Choose how PXPlay should connect to this console on startup.</string>
+    <string name="auto_connect_on_launch_connection_type_row_summary">%1$s\n\nChoose how PXPlay should connect to this console on startup.</string>
+    <string name="auto_connect_mode_local_play">Local play</string>
+    <string name="auto_connect_mode_remote_psn">Remote play (PSN)</string>
+    <string name="auto_connect_mode_remote_ip">Remote play (IP)</string>
+    <string name="overrideGlobalSettingsTitle">Override global settings</string>
+    <string name="overrideGlobalSettingsSummary">Enable separate settings for local and remote streaming.</string>
+    <string name="tv_console_settings_right_pane_hint">Enable override global settings to configure local and remote streaming for this console.</string>
+    <string name="registered_console_stream_override_indicator">Custom local and remote stream settings enabled</string>
+    <string name="localSettingsTabTitle">Local Settings</string>
+    <string name="remoteSettingsTabTitle">Remote Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="edit_profiles_title">Edit profiles</string>
+    <string name="edit_profiles_empty_title">No profiles yet</string>
+    <string name="edit_profiles_empty_subtitle">Sign in with PSN or register a console to create a profile here.</string>
+    <string name="edit_profiles_offline_fallback_name">Local</string>
+    <string name="edit_profiles_placeholder_dash">—</string>
+    <string name="edit_profiles_status_online">Online profile</string>
+    <string name="edit_profiles_status_offline">Offline profile</string>
+    <string name="edit_profiles_account_type_label">Account type</string>
+    <string name="edit_profiles_account_type_psn">PSN account</string>
+    <string name="edit_profiles_account_type_offline">Offline account</string>
+    <string name="edit_profiles_account_id_label">Account ID</string>
+    <string name="edit_profiles_online_id_label">Online ID</string>
+    <string name="edit_profiles_link_psn">Link to PSN</string>
+    <string name="edit_profiles_refresh_tokens">Refresh PSN tokens</string>
+    <string name="edit_profiles_unlink">Remove PSN link</string>
+    <string name="edit_profiles_delete">Delete profile</string>
+    <string name="edit_profiles_delete_title">Delete this profile?</string>
+    <string name="edit_profiles_delete_message">This removes the profile from this device. Registered consoles tied only to this profile will be removed as well.</string>
+    <string name="edit_profiles_delete_confirm">Delete</string>
+    <string name="edit_profiles_wrong_account">Wrong account</string>
+    <string name="edit_profiles_tokens_refreshed">Tokens refreshed successfully</string>
+    <string name="edit_profiles_unlink_title">Unlink from PSN?</string>
+    <string name="edit_profiles_unlink_message">The profile will stay on this device as an offline account. Automatic Remote connection will no longer work for it until you sign in to PSN again and restore the link.</string>
+    <string name="edit_profiles_selector_heading">Profiles</string>
+    <string name="menu_edit_profiles">Edit profiles</string>
+    <string name="edit_profiles_navigate_up">Back</string>
+
+    <string name="widget_config_title">PXPlay Widget</string>
+    <string name="widget_tap_action_none">No action</string>
+    <string name="console_widget_description">Quick Remote Play and Local Play for one console.</string>
+    <string name="console_widget_remote_play">Remote</string>
+    <string name="console_widget_local_play">Local</string>
+    <string name="console_widget_profile_label">Profile</string>
+    <string name="console_widget_console_label">Console</string>
+    <string name="console_widget_body_action_label">Tap widget (outside buttons)</string>
+    <string name="console_widget_body_open_app">Open app</string>
+    <string name="console_widget_body_remote">Remote Play</string>
+    <string name="console_widget_body_local">Local Play</string>
+    <string name="console_widget_save">Save</string>
+    <string name="console_widget_account_fallback">Account %1$d</string>
+    <string name="console_widget_tap_to_configure">PXPlay\nNo configuration data, finish Widget setup.</string>
+    <string name="console_widget_console_missing">Console was removed.</string>
+    <string name="console_widget_no_profiles">No registered consoles. Open PXPlay and register a console first.</string>
+    <string name="console_widget_no_consoles_for_profile">No consoles for this profile.</string>
+
+</resources>
