@@ -24,9 +24,10 @@ This is a one-time purchase that grants personal use across multiple devices. A 
 ## Android Version
 Download the Android version on [Google Play](https://play.google.com/store/apps/details?id=psplay.grill.com). An alternative APK download is also available from the
 latest [GitHub release](https://github.com/streamingdv/PSPlay-Application-Hosting/releases/). Please note that a valid Android APK license is required, which can be purchased [here](https://streamingdv.com/shop-list-ns).
+The APK version can be used as a standalone app without any Google Play dependencies, making it easy to install on devices that do not include the Google Play Store, such as Amazon Fire TV, Meta Quest, or Huawei devices.
 
 ## iOS / Apple TV
-Download the iOS/Apple TV PXPlay port called MirrorPlay from the [App Store](https://apps.apple.com/us/app/mirrorplay-remote-streaming/id1638586503).
+Download the iOS/Apple TV PXPlay port called formerly known as MirrorPlay from the [App Store](https://apps.apple.com/us/app/mirrorplay-remote-streaming/id1638586503).
 
 ## Open Source Contributions
 The development of PXPlay has been supported by several excellent open-source libraries:
