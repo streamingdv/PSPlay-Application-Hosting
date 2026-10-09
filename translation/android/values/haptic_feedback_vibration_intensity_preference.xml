@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="haptic_feedback_vibration_intensity_preference">
+        <item>Weak</item>
+        <item>Normal</item>
+        <item>Strong</item>
+        <item>Very Strong</item>
+    </string-array>
+</resources>
