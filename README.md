@@ -42,6 +42,10 @@ Parts of the PXPlay PC port, such as the Vulkan rendering pipeline and the gamep
 - [libplacebo JNI project](https://github.com/streamingdv/libplacebo-jni)
 - [Jamepad with D-Sense/ D-Shock features](https://github.com/grill2010/Jamepad)
 
+## 3rd Party integration
+
+For a launcher or frontend that wants to stream a PlayStation console through PXPlay you can find more information [here.](https://github.com/streamingdv/3rd_party_integration/THIRD_PARTY_LAUNCHER_API.md)
+
 ## Contact
 For any inquiries or issues with the application, feel free to reach out to me at [streamingdv@outlook.com](mailto:streamingdv@outlook.com).
 
