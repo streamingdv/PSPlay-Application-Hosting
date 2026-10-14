@@ -45,6 +45,12 @@ What it does not do is stay there: it asks for the front rather than holding it,
 own window *after* starting PXPlay ends up in front of the stream, and in front of a message waiting to be
 acknowledged. Raise yourself before the start, not after.
 
+Nothing on the way asks the user for anything a stream does not need. The warning about installed screen
+recording software (OBS, Bandicam), which a stream started in PXPlay's own window shows first, is only written
+to the log for a start you asked for. What does need the user, the login PIN of the console or a message about
+why the stream did not come up, is described in `session.json` so that you can show it yourself, see
+[when PXPlay needs the user](#when-pxplay-needs-the-user).
+
 ## The loading panel and the screen
 
 When the start covers the screen, whichever of the two fullscreens that is, the loading panel covers it with a
@@ -161,7 +167,11 @@ get and how long you wait.
    first, with the PSN credentials of the account it is registered to. There is nothing to send beforehand.
 3. If it did not answer, a connection **over the internet is tried automatically**. That needs the remote
    connection enabled in PXPlay and working PSN credentials for the account the console is registered to.
-   Without either you get `15` rather than a wait.
+   Without either you get `15` rather than a wait. PSN is asked for the consoles of that account, and the one
+   with the PSN device id PXPlay stored for the registration is taken, so a user with several PS5s is not asked
+   which one you meant. PXPlay stores that id the first time it lists the games of the account or starts one
+   with `--title-id`. Without one, or when PSN no longer lists it, the console is picked by its name as in
+   PXPlay's own window, which asks the user to [choose](#when-pxplay-needs-the-user) when more than one fits.
 4. Steps 2 and 3 together are capped at **30 seconds**, after which you get `14`. A console that answered
    from standby is given **50 seconds** instead, since that is what coming out of rest mode can take.
 
@@ -208,6 +218,12 @@ Two outcomes to tell apart, because they are not the same thing:
 The whole step is capped at **25 seconds**, after which the console is connected to regardless. It runs before
 the console is looked for, so it adds to the waits in the section above.
 
+A console that asks for the login PIN of its user while the stream connects had nobody logged in when the game
+was asked for, and a console in that state starts nothing, whatever it reported. PXPlay therefore asks for the
+game once more as soon as the login went through, whether the PIN came from what PXPlay has stored for the
+console, from its dialog, or from your [answer](#answering) to the prompt. The stream is already running by
+then, and the console switches to the game in it.
+
 ## Exit codes
 
 The exit code is the authoritative answer about what happened. The numbers never change; new ones are only
@@ -241,13 +257,20 @@ request still exits `0`, exactly as before.
 one is already running, the process you started passes the request to it and leaves at once. The stream is in
 the other process and `session.json` names it. A handed-off request that never becomes a stream says so in
 the same file, with `state: "ended"` and the `exitCode` a launch of its own would have left with, so after
-`30` that file is the whole answer and there is nothing for you to time out on.
+`30` that file is the whole answer and there is nothing for you to time out on. The one request that gets no
+answer is one PXPlay cannot take because it is already starting or showing a stream: it is logged and dropped,
+and `session.json` is not written for it. Compare `consoleId` and `updatedAt` before you take what the file
+says as the answer to your request.
 
 **A failure is shown to the user before the process leaves.** Anything that goes wrong puts a message in
 PXPlay's window and waits for it to be acknowledged, so a launcher closing that window cannot take the
 explanation with it. The exit code therefore arrives only once that has been clicked away. You do not have to
-wait for it: the reason is in `session.json` as `state: "ended"` with the `exitCode` the moment the failure is
-decided, so watch the file and show your own message instead.
+leave that to the user: for as long as the message waits it is in `session.json` as a
+[`prompt`](#when-pxplay-needs-the-user), with its text, and dismissing it there lets the process leave at
+once. A failure PXPlay decides before it connects to the console (the license, the console, the way to it,
+`--title-id`) is also in the file as `state: "ended"` with the `exitCode` the moment it is decided. One the
+connection itself reports, such as a login the console refused or video that cannot be decoded, arrives while
+`state` is still `starting`: the `ended` and the code follow once the message is dismissed.
 
 ## The files PXPlay writes
 
@@ -255,7 +278,8 @@ All in `integration/` inside the base directory named above. Every file carries 
 and each is written beside its own name and then moved over it, so a reader sees the whole of the old one or
 the whole of the new one. On a file system that cannot do that in one step, a home directory on a network
 share for instance, treat a document that will not parse as one to read again rather than as an error. PXPlay
-writes them and never reads them back.
+writes them and never reads them back. The one file it reads in this directory is the answer you give to a
+prompt, which you write, see [answering](#answering).
 
 **`session.json`** — written while a stream *you* asked for is running, and never for one the user started
 themselves.
@@ -283,8 +307,11 @@ themselves.
 - `titleLaunched` is there only when `--title-id` was given, and says whether the console started that game.
   `true` means the picture is on the game, `false` means it is not and you are looking at whatever the console
   had in front. Written before the console is even looked for, so it is there by the time `state` is
-  `streaming`.
-- `exitCode` is the only other field that is not always there, and it is written once per session. A launch that
+  `streaming`. A `false` can still turn `true` later, when the console wanted its login PIN and started the
+  game when it was asked for again after the login.
+- `prompt` is there only while a dialog waits for the user, see
+  [when PXPlay needs the user](#when-pxplay-needs-the-user).
+- `exitCode` is not always there either, and it is written once per session. A launch that
   reports its own outcome, which is every one that did not answer `30`, puts it there with `state: "ended"` as
   soon as that outcome is known. After a `30` the stream is in a process you never started and whose exit you
   will not see, so the code is there for a request that **failed** before it streamed and not for a session
@@ -334,6 +361,93 @@ on whether a stream may start.
 
 Rewritten at every start, and by `--activate-license` before it exits.
 
+## When PXPlay needs the user
+
+A few things cannot go on without the user: the console asks for the login PIN of its user, PXPlay has to say
+why the stream did not come up, or a console has to be picked. In PXPlay's own window each of them is a dialog.
+A launcher that keeps PXPlay out of sight would leave the user waiting in front of nothing, so while such a
+dialog is up, `session.json` describes it as `prompt`, and you can ask the user yourself and answer for them.
+
+```json
+{ "protocol": 1, "updatedAt": 1757000000000, "state": "starting",
+  "consoleId": "aabbccddeeff", "pid": 24680, "windowHandle": 0, "panelWindowHandle": 1183554,
+  "prompt": { "id": 1757000000123, "type": "loginPin", "title": "Login PIN",
+              "text": "The PIN is usually a 4-digit number", "pinRefused": false } }
+```
+
+- `id` names this one dialog. Every dialog gets a new one, also in a later session, and a new `id` is a new
+  dialog even when the `type` stays the same: a second `loginPin` with `pinRefused: true` is the console
+  turning down the PIN it was sent.
+- `type` says what is asked and how it is answered:
+  - `loginPin`: the console wants the four-digit login PIN of the user. Answer `pin` with the digits, or
+    `cancel`.
+  - `message`: something to read, which `title` and `text` hold. Answer `dismiss`, which is what its OK button
+    does.
+  - `choice`: something to pick in PXPlay's window, today one of several consoles for a connection over the
+    internet when none of them could be told apart by its device id. Answer `cancel`, or show the window.
+
+  A `type` that is not on this list is one a later PXPlay added: show PXPlay's window for it.
+- `title` and `text` are what the dialog says, in the language PXPlay is set to, ready to be shown as they are.
+- `pinRefused` is only there for `loginPin`.
+
+`prompt` disappears as soon as the dialog does, however it went: answered by you, answered in PXPlay's window,
+or taken away because the start moved on. It is there while `state` is `starting`, and after a failure while the
+process waits for its message to be acknowledged, in which case `state` is `ended` and the `exitCode` is already
+in the file. Whatever waited in the loading panel is gone once the picture arrives, and `streaming` starts out
+without a `prompt`. Only a failure the stream reports after that in the hidden loading panel rather than in its
+own window, which is rare, still shows up as a `message` while `state` is `streaming`, and answering it is then
+the only way it can be seen.
+
+### Answering
+
+Write `prompt-answer.json` into the same `integration/` directory:
+
+```json
+{ "protocol": 1, "promptId": 1757000000123, "action": "pin", "pin": "1234" }
+```
+
+- `promptId` is the `id` of the prompt you answer. An answer to any other id is ignored, which is what makes
+  an answer that arrives after the dialog changed harmless.
+- `action` is `pin`, `dismiss` or `cancel`, whichever the `type` takes. `pin` comes with exactly four digits,
+  as a string, so that a leading zero stays.
+- Write it beside its name and move it into place, the way PXPlay writes its own files, so that it is never
+  read half written.
+
+While a prompt is open, PXPlay looks for the file every 200 milliseconds, removes it once read, and does what
+the button the answer stands for does:
+
+- `pin` sends the PIN, as typing it into the dialog does. A wrong one comes back as a new `loginPin` prompt with
+  `pinRefused: true`.
+- `dismiss` closes the message. A message about a failure is followed by the process leaving with its exit code;
+  a message the stream can carry on from is followed by the stream.
+- `cancel` ends the start, like the Cancel button of the dialog, and the process leaves with `16`.
+
+An answer that does not fit the prompt on screen, because of another id, an action its `type` does not take or
+a PIN that is not four digits, is removed and ignored, and the prompt stays. One written after its prompt was
+already gone is not read at all, and is removed when the next prompt opens.
+
+The PIN is only asked for when PXPlay has none for the console: the user can store it in the settings of the
+console in PXPlay, and it is then sent without a prompt. Only a stored PIN the console turns down, because it was
+changed on the PS5, still leads to a `loginPin` prompt. That is worth telling users whose PS5 has a login PIN on
+its user.
+
+If you would rather show PXPlay's own dialog, show the loading panel window and give it the keyboard focus: the
+dialog is in that window, the one `panelWindowHandle` named while the start was under way. PXPlay works its
+dialogs from a controller with key presses, which only reach the window that has the focus. On Windows, the
+process you started makes none while the keyboard focus is in a window that is not one of PXPlay's, so a
+controller the user works your interface with is not also typed into it by PXPlay, a PIN pad of yours
+included.
+
+Three limits:
+
+- Only the process you started describes its prompts. After a `30` the stream is in PXPlay's main window, which
+  PXPlay brings to the front itself and shows its dialogs in.
+- With one of the renderers that draw through JavaFX, the ones PXPlay's video settings list as DirectX, OpenGL
+  and Software and mark as not recommended, the stream window opens before the console is connected and
+  `state` is `streaming` from the start. Their dialogs are shown in that window, the one you embedded, rather
+  than as a prompt.
+- A PXPlay before 3.1.0 never writes `prompt` and does not read an answer either.
+
 ## Putting it together
 
 1. Read `consoles.json` and let the user pick a console.
@@ -342,9 +456,11 @@ Rewritten at every start, and by `--activate-license` before it exits.
 4. Watch `session.json` from there. `panelWindowHandle` while `state` is `starting`, then `windowHandle` once
    `state` is `streaming`. A second or two between them is normal, since a native renderer unpacks libplacebo
    first, and longer when you passed `--title-id`.
-5. If `state` becomes `ended` with an `exitCode` instead, that is the failure, and you have it before the user
-   has dismissed PXPlay's message about it.
-6. The exit code of the process you started says how the session ended. `0` means the user ended it. After a
+5. Whenever the file has a `prompt`, PXPlay is waiting for the user. Ask them yourself and answer it in
+   `prompt-answer.json`, or show PXPlay's window, see [when PXPlay needs the user](#when-pxplay-needs-the-user).
+6. If `state` becomes `ended` with an `exitCode` instead, that is the failure, and you have it before the user
+   has dismissed PXPlay's message about it. The message is the `prompt` of that moment: show it, then dismiss it.
+7. The exit code of the process you started says how the session ended. `0` means the user ended it. After a
    `30` there is no such code, because the process the stream is in was there before you and stays after: the
    session is over when `state` becomes `ended`.
 
