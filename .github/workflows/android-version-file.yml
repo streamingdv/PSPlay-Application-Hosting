@@ -1,0 +1,91 @@
+name: Android version file
+
+# PXPlay for Android learns about an update from pxplay/notification/version_psplay_android on
+# streamingdv.github.io. This sets that file to the newest APK of the published releases, so it no longer has to be
+# changed by hand after a release.
+#
+# Needs the repository secret PAGES_REPO_TOKEN: a fine-grained personal access token that may read and write the
+# contents of streamingdv/streamingdv.github.io.
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-version-file
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find the newest Android APK
+        id: apk
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          # A release tagged like v3.1.1_v8.1.1 carries the APK of that Android version, which may still be uploading
+          expected=""
+          if [[ "${TAG:-}" =~ _v([0-9]+(\.[0-9]+)+)$ ]]; then
+            expected="${BASH_REMATCH[1]}"
+          fi
+          newest=""
+          for attempt in $(seq 1 30); do
+            newest=$(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=30" | jq -r '
+              [ .[] | select((.draft | not) and (.prerelease | not)) | .assets[]
+                | select(.state == "uploaded")
+                | .name | capture("^PXPlay_Android_v(?<version>[0-9]+(\\.[0-9]+)+)\\.apk$").version ]
+              | sort_by(split(".") | map(tonumber)) | last // ""') || newest=""
+            if [[ -z "$expected" && -n "$newest" ]]; then
+              break
+            fi
+            if [[ -n "$newest" && "$(printf '%s\n%s\n' "$expected" "$newest" | sort -V | tail -n 1)" == "$newest" ]]; then
+              break
+            fi
+            echo "Waiting for the APK of version ${expected:-any} (attempt ${attempt})"
+            sleep 20
+          done
+          if [[ -z "$newest" ]]; then
+            echo "No published release has an Android APK"
+            exit 1
+          fi
+          echo "The newest Android APK is $newest"
+          echo "version=$newest" >> "$GITHUB_OUTPUT"
+
+      - name: Check out the website
+        uses: actions/checkout@v4
+        with:
+          repository: streamingdv/streamingdv.github.io
+          ref: main
+          token: ${{ secrets.PAGES_REPO_TOKEN }}
+          path: website
+
+      - name: Update the version file
+        working-directory: website
+        env:
+          VERSION: ${{ steps.apk.outputs.version }}
+        run: |
+          set -euo pipefail
+          file="pxplay/notification/version_psplay_android"
+          current="$(tr -d '[:space:]' < "$file" || true)"
+          if [[ "$current" == "$VERSION" ]]; then
+            echo "The version file is at $VERSION already"
+            exit 0
+          fi
+          # Never back to an older version, as when an older release is published again
+          if [[ -n "$current" && "$(printf '%s\n%s\n' "$current" "$VERSION" | sort -V | tail -n 1)" != "$VERSION" ]]; then
+            echo "The version file is at $current, which is newer than $VERSION"
+            exit 0
+          fi
+          printf '%s\n' "$VERSION" > "$file"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$file"
+          git commit -m "Update the Android version to $VERSION"
+          git push
