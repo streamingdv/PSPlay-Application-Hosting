@@ -58,13 +58,23 @@ jobs:
           echo "The newest Android APK is $newest"
           echo "version=$newest" >> "$GITHUB_OUTPUT"
 
+      # Plain git rather than actions/checkout: this repository allows only actions of its own owner
       - name: Check out the website
-        uses: actions/checkout@v4
-        with:
-          repository: streamingdv/streamingdv.github.io
-          ref: main
-          token: ${{ secrets.PAGES_REPO_TOKEN }}
-          path: website
+        env:
+          PAGES_REPO_TOKEN: ${{ secrets.PAGES_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$PAGES_REPO_TOKEN" ]]; then
+            echo "The secret PAGES_REPO_TOKEN is not set"
+            exit 1
+          fi
+          # As a header rather than in the URL, so that it is not stored in the remote of the clone
+          credentials="$(printf 'x-access-token:%s' "$PAGES_REPO_TOKEN" | base64 -w 0)"
+          echo "::add-mask::$credentials"
+          auth_header="AUTHORIZATION: basic $credentials"
+          git -c "http.https://github.com/.extraheader=$auth_header" \
+            clone --depth 1 --branch main https://github.com/streamingdv/streamingdv.github.io.git website
+          git -C website config --local "http.https://github.com/.extraheader" "$auth_header"
 
       - name: Update the version file
         working-directory: website
